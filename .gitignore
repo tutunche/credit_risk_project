@@ -13,8 +13,9 @@ env/
 .env
 *.env
 
-# Data files - usually do NOT commit large/raw data
+# Data files
 data/
+data_zip/
 *.csv
 *.parquet
 *.xlsx
@@ -30,4 +31,7 @@ artifacts/
 .DS_Store
 .vscode/
 .idea/
+
+# depo files
+depo/
 EOF
