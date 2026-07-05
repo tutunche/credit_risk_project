@@ -1,0 +1,14 @@
+joblib
+jupyterlab
+kaggle
+lightgbm
+matplotlib
+numpy
+optuna
+pandas
+scikit-learn
+scipy
+shap
+torch
+tqdm
+xgboost
