@@ -43,8 +43,23 @@ The training set is highly imbalanced:
 
 ## Reproduce
 
-```bash
+### 1. Set up Kaggle API access
 
+Downloading the data requires the Kaggle CLI (installed via `requirements.txt`) and a Kaggle API token:
+
+1. Log in to Kaggle and accept the [Home Credit Default Risk competition rules](https://www.kaggle.com/c/home-credit-default-risk/rules) (the download fails with a 403 otherwise).
+2. Go to [kaggle.com/settings](https://www.kaggle.com/settings) and create an API token.
+3. Create a `.env` file in the project root with the token (it is gitignored — never commit it):
+
+```bash
+export KAGGLE_API_TOKEN=<your-kaggle-api-token>
+```
+
+### 2. Install, download, run
+
+```bash
 pip install -r requirements.txt
+source .env
 bash scripts/download_data.sh
 jupyter lab
+```
