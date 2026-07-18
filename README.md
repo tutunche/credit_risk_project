@@ -26,10 +26,10 @@ The training set is highly imbalanced:
 
 | Model | Feature Set | Validation Method | ROC AUC |
 |---|---|---|---:|
-| Logistic Regression | Application only | Holdout | 0.7489 |
+| Logistic Regression (elastic net, grid-searched) | Engineered multi-table features | Holdout | 0.7784 |
 | XGBoost | Application only | Holdout | 0.7493 |
 | LightGBM | Engineered multi-table features | 5-fold CV | 0.7883 +/- 0.0045 |
-| Neural Network | Engineered multi-table features | Holdout | 0.7784 |
+| Neural Network | Engineered multi-table features | Holdout | 0.7787 |
 | Tuned XGBoost | Engineered multi-table features | Holdout | 0.7938 |
 
 ## Key Feature Groups
@@ -44,6 +44,7 @@ The training set is highly imbalanced:
 ## Reproduce
 
 ```bash
+
 pip install -r requirements.txt
 bash scripts/download_data.sh
 jupyter lab
