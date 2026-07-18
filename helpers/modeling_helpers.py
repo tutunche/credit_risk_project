@@ -74,8 +74,7 @@ def train_lgbm(
         model = lgb.LGBMClassifier(**default_params)
         model.fit(
             X_tr_processed, y_tr,
-            eval_X=X_val_processed,
-            eval_y=y_val,
+            eval_set=[(X_val_processed, y_val)],
             callbacks=[lgb.early_stopping(50, verbose=False)],
         )
         val_pred = model.predict_proba(X_val_processed)[:, 1]
