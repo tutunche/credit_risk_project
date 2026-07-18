@@ -4,11 +4,15 @@ set -euo pipefail
 
 COMPETITION="home-credit-default-risk"
 
-# Download zip one level above project folder
-ZIP_DIR="../data_zip"
+# Resolve project root from this script's location so the script
+# works no matter where it is invoked from
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
-# Unzip files one level above project folder
-DATA_DIR="../data"
+# Download zip into project folder
+ZIP_DIR="${PROJECT_ROOT}/data_zip"
+
+# Unzip files into project folder
+DATA_DIR="${PROJECT_ROOT}/data"
 
 ZIP_PATH="${ZIP_DIR}/${COMPETITION}.zip"
 
