@@ -110,7 +110,7 @@ class NNModel(nn.Module):
         self.relu = nn.ReLU()
         self.dropout1 = nn.Dropout(dropout_rate)
 
-        self.output = nn.Linear(256)
+        self.output = nn.Linear(256, 1)
 
     def forward(self, x):
         x = self.fc1(x)
