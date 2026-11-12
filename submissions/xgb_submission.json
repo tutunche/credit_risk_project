@@ -1,0 +1,4 @@
+{
+  "val_auc": 0.7937614666349045,
+  "model": "models/xgb_final_pipeline_w_50_optuna.joblib"
+}

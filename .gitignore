@@ -20,11 +20,13 @@ data_zip/
 *.xlsx
 *.zip
 
-# Models / artifacts
-models/
+# Models / artifacts: binaries stay local; the tuned hyperparameters are tracked
+models/*
+!models/*_best_params.json
 artifacts/
 *.pkl
 *.joblib
+*.pt
 
 # OS/editor
 .DS_Store
@@ -33,3 +35,8 @@ artifacts/
 
 # depo files
 depo/
+
+# Scratch notebooks, RunPod originals and dev snapshots
+testing_area.ipynb
+*_runpod.ipynb
+notebook_snapshots/

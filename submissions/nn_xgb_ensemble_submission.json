@@ -1,0 +1,7 @@
+{
+  "nn_weight": 0.4,
+  "nn_val_auc": 0.7904734731432312,
+  "xgb_val_auc": 0.7937614666349045,
+  "equal_blend_val_auc": 0.7964140721582259,
+  "best_blend_val_auc": 0.7965726764631418
+}
